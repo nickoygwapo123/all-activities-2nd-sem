@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<label>Fruits: </label>
+	<select id="fruits">
+		<option>Apple</option>
+		<option>Banana</option>
+		<option>Orange</option>
+	</select><hr>
+	<label>Quantity: </label>
+	<select id="quantity">
+		<option>1</option>
+		<option>2</option>
+		<option>3</option>
+		<option>4</option>
+		<option>5</option>
+	</select><hr>
+	<label>Cash: </label>
+	<input type="text" id="cash">
+	<button id="save" onclick="fruit.display()">SAVE</button><hr>
+	<p>You Selected: </p>
+	<br><br><br><br><br><br><br><br>
+	<img src="apple.jpg" id="a" width="200px" hidden="true">
+	<img src="banana.jpg" id="b" width="200px" hidden="true">
+	<img src="orange.jpg" id="c" width="200px" hidden="true">
+	<hr>
+	<p>Quantity: </p>
+	<p id="q"></p>
+	<p>Cash: </p>
+	<p id="c"></p>
+	<p>Price: </p>
+	<p id="p"></p>
+	<p>Change: </p>
+	<p id="c"></p>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		var fruit = {
+			cash : 0,
+			getvalues : function(){
+				var cash = Number(document.getElementById("cash").value);
+				var foptions = document.getElementById("fruits").options;
+				var findex = document.getElementById("fruits").selectedIndex;
+				var result = foptions[findex].text;
+				var qoptions = document.getElementById("quantity").options;
+				var qindex = document.getElementById("quantity").selectedIndex;
+				var result2 = qoptions[qindex].text;
+			},
+			display : function() 
+		},
+	}
+		
+
+		$(function(){
+			$("button").click(function(){
+					$("#a").fadeIn(1000)
+				});
+			}),
+</script>
+</body>
+</html>
